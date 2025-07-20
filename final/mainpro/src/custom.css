@@ -1,0 +1,119 @@
+body.dark-mode {
+    background-color: #0d1117;
+    color: #f0f6fc;
+  }
+  
+  body.light-mode {
+    background-color: #f8f9fa;
+    color: #212529;
+  }
+  
+  .app-container {
+    padding: 4rem 1rem;
+    min-height: 100vh;
+    transition: background-color 0.3s ease, color 0.3s ease;
+  }
+  
+  .gradient-text {
+    background: linear-gradient(to right, #8b5cf6, #ec4899);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  
+  /* 🔥 Fully dark input fix */
+  .fancy-input {
+    border: 2px solid rgba(255, 255, 255, 0.2);
+    border-radius: 12px;
+    padding: 0.75rem 1rem;
+    background-color: #0d1117;
+    color: #ffffff;
+    transition: all 0.3s ease;
+    box-shadow: 0 0 8px rgba(255, 255, 255, 0.05);
+  }
+  
+  .fancy-input::placeholder {
+    color: rgba(255, 255, 255, 0.4);
+  }
+  
+  .fancy-input:focus {
+    outline: none;
+    border-color: #8b5cf6;
+    box-shadow: 0 0 12px rgba(139, 92, 246, 0.4);
+  }
+  
+  .fancy-btn {
+    background: linear-gradient(135deg, #8b5cf6, #ec4899);
+    color: white;
+    border: none;
+    border-radius: 10px;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    font-weight: 600;
+  }
+  
+  .fancy-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 15px rgba(236, 72, 153, 0.5);
+  }
+  
+  .custom-upload {
+    display: inline-block;
+    background: linear-gradient(to right, #6366f1, #ec4899);
+    color: white;
+    padding: 0.5rem 1rem;
+    border-radius: 10px;
+    cursor: pointer;
+    font-weight: 500;
+    transition: background 0.3s ease;
+    border: none;
+  }
+  
+  .custom-upload:hover {
+    background: linear-gradient(to right, #7c3aed, #db2777);
+  }
+  
+  .hidden-file {
+    display: none;
+  }
+  
+  /* ✅ Animated background */
+  body::before {
+    content: "";
+    position: fixed;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle at center, rgba(139, 92, 246, 0.1), transparent),
+                radial-gradient(circle at 30% 30%, rgba(236, 72, 153, 0.08), transparent),
+                radial-gradient(circle at 70% 60%, rgba(255, 255, 255, 0.03), transparent);
+    animation: moveBackground 30s linear infinite;
+    z-index: -1;
+    pointer-events: none;
+    opacity: 0.7;
+  }
+  
+  @keyframes moveBackground {
+    0% { transform: translate(0, 0); }
+    50% { transform: translate(25%, 10%); }
+    100% { transform: translate(0, 0); }
+  }
+  
+  /* Optional glass effect for cards */
+  .glass-box {
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(8px);
+    border-radius: 12px;
+  }
+  
+  @media (min-width: 992px) {
+    .app-wrapper {
+      padding-left: 150px;
+      padding-right: 150px;
+    }
+  
+    .app-container {
+      max-width: 1200px;
+    }
+  }
+  

@@ -1,0 +1,9 @@
+streamlit
+diffusers
+transformers
+torch
+Pillow
+opencv-python
+accelerate
+flask
+flask_cors
