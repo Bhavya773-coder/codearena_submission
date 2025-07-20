@@ -81,6 +81,9 @@ def caption_image():
     posts = create_social_posts(caption)
     return jsonify({"caption": caption, "posts": posts})
 
+
+
+
 @app.route("/generate-seo", methods=["POST"])
 def generate_seo_api():
     if 'image' not in request.files or 'alt_text' not in request.form:
